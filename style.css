@@ -1,9 +1,7 @@
 body{
     background-image: url("nflbg.jpg");
+    color: aliceblue;
 }
 p{
     cursor: pointer;
-}
-.next{
-    visibility: hidden;
 }
