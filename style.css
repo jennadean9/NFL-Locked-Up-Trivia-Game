@@ -1,0 +1,9 @@
+body{
+    background-image: url("nflbg.jpg");
+}
+p{
+    cursor: pointer;
+}
+.next{
+    visibility: hidden;
+}
