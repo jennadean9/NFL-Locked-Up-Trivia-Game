@@ -4,13 +4,6 @@ class QandA {
         this.options = options;
         this.answer = answer;
     }
-    checkAnswer(optionClicked){
-        if(optionClicked === this.answer){
-            return true;
-        }else{ 
-            return false;
-        }
-    }
 }
 
 const allQuestions = [
@@ -34,16 +27,14 @@ const allQuestions = [
 const playButton = document.querySelector(".play");
 const container = document.querySelector(".container");
 let currentRound = 0;
+const nextButton = document.querySelector(".nextButton")
 const optionsContainer = document.querySelectorAll(".optionsContainer")
 let currentQuestion = allQuestions[currentRound].question;
 let comments = document.querySelector(".comments")
-// let currentOptionA = allQuestions[currentRound].options[0]
-// let currentOptionB = allQuestions[currentRound].options[1]
-// let currentOptionC = allQuestions[currentRound].options[2]
-// let currentOptionD = allQuestions[currentRound].options[3]
+let points = 0;
 
 playButton.addEventListener("click", (e) => {
-    container.innerText = currentQuestion
+    container.innerText = allQuestions[currentRound].question
     optionsContainer[0].innerText = allQuestions[currentRound].options[0]
     optionsContainer[1].innerText = allQuestions[currentRound].options[1]
     optionsContainer[2].innerText = allQuestions[currentRound].options[2]
@@ -51,13 +42,31 @@ playButton.addEventListener("click", (e) => {
 })
 
 
-
-console.log(allQuestions[currentRound].options)
-console.log(allQuestions)
-
-
-
-
+for (let i = 0; i < optionsContainer.length; i++){
+    optionsContainer[i].addEventListener("click", (e) => {
+        console.log("hey")
+        console.log(allQuestions[currentRound].answer)
+        if(optionsContainer[i].innerText == allQuestions[currentRound].answer){
+            currentRound++
+            comments.innerText = "Correct" 
+            nextButton.style.visibility = "visible"
+        } else {
+            currentRound++
+            comments.innerText = "Incorrect"
+            nextButton.style.visibility = "visible"
+        }
+    })
+}
+nextButton.addEventListener("click", (e) =>{
+    nextButton.style.visibility = "hidden"
+    comments.innerText = " "
+    container.innerText = allQuestions[currentRound].question
+    optionsContainer[0].innerText = allQuestions[currentRound].options[0]
+    optionsContainer[1].innerText = allQuestions[currentRound].options[1]
+    optionsContainer[2].innerText = allQuestions[currentRound].options[2]
+    optionsContainer[3].innerText = allQuestions[currentRound].options[3]
+    } 
+)
 
 
 

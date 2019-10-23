@@ -28,3 +28,6 @@ main{
 .optionsContainer{
     cursor: pointer;
 }
+.nextButton{
+    visibility: hidden;
+}
