@@ -36,6 +36,7 @@ const container = document.querySelector(".container");
 let currentRound = 0;
 const optionsContainer = document.querySelectorAll(".optionsContainer")
 let currentQuestion = allQuestions[currentRound].question;
+let comments = document.querySelector(".comments")
 // let currentOptionA = allQuestions[currentRound].options[0]
 // let currentOptionB = allQuestions[currentRound].options[1]
 // let currentOptionC = allQuestions[currentRound].options[2]
@@ -49,15 +50,7 @@ playButton.addEventListener("click", (e) => {
     optionsContainer[3].innerText = allQuestions[currentRound].options[3]
 })
 
-for (let i = 0; i < optionsContainer.length; i++){
-    optionsContainer[i].addEventListener("click", (e) => {
-        if(optionsContainer[i] = true){
-            alert("True")
-        } else {
-            alert("Wrong")
-        }
-    })
-}
+
 
 console.log(allQuestions[currentRound].options)
 console.log(allQuestions)
