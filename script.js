@@ -29,7 +29,9 @@ const allQuestions = [
     new QandA("Which unortunate former RB for the Vikings got put in handcuffs at the airport for carrying dried urine and a Whizzinator? Hm? What's a Whizzinator, you ask? Why, it is a device that turns dried urine into liquid urine.",
     ["Wes Welker", "Onterrio Smith",  "Cedric Benson", "Fran Tarkenton"],
     "Onterrio Smith")
-]
+];
+console.log(allQuestions)
+console.log(this)
 
 
 
