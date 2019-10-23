@@ -1,6 +1,29 @@
 body{
-    background-image: url("nflbg.jpg");
+    background: url("lockedup.jpg") no-repeat center center fixed;
     color: aliceblue;
+    background-size: cover;
+}
+section{
+    text-shadow: 3px 2px black;
+    font-family: Helvetica;
+    font-weight: 800;
+    background: rgba(100, 100, 100, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* h2{
+    text-shadow: 2px 1px black;
+    font-family: Helvetica;
+    font-weight: 800;
+    text-shadow: 3px 2px darkslategray;
+} */
+main{
+    background: rgba(100, 100, 100, 0.5);
+    font-family: Helvetica;
+    font-weight: 700;
+    text-shadow: 2px 1px black;
 }
 p{
     cursor: pointer;
