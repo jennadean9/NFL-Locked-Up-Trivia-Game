@@ -32,6 +32,7 @@ const optionsContainer = document.querySelectorAll(".optionsContainer")
 let currentQuestion = allQuestions[currentRound].question;
 let comments = document.querySelector(".comments")
 let points = 0;
+const tryAgain = document.querySelector(".tryAgain")
 
 playButton.addEventListener("click", (e) => {
     container.innerText = allQuestions[currentRound].question
@@ -41,15 +42,13 @@ playButton.addEventListener("click", (e) => {
     optionsContainer[3].innerText = allQuestions[currentRound].options[3]
 })
 
-
 for (let i = 0; i < optionsContainer.length; i++){
     optionsContainer[i].addEventListener("click", (e) => {
-        console.log("hey")
-        console.log(allQuestions[currentRound].answer)
         if(optionsContainer[i].innerText == allQuestions[currentRound].answer){
             currentRound++
             comments.innerText = "Correct" 
             nextButton.style.visibility = "visible"
+            points++
         } else {
             currentRound++
             comments.innerText = "Incorrect"
@@ -58,6 +57,7 @@ for (let i = 0; i < optionsContainer.length; i++){
     })
 }
 nextButton.addEventListener("click", (e) =>{
+    endTrivia()
     nextButton.style.visibility = "hidden"
     comments.innerText = " "
     container.innerText = allQuestions[currentRound].question
@@ -65,71 +65,28 @@ nextButton.addEventListener("click", (e) =>{
     optionsContainer[1].innerText = allQuestions[currentRound].options[1]
     optionsContainer[2].innerText = allQuestions[currentRound].options[2]
     optionsContainer[3].innerText = allQuestions[currentRound].options[3]
-    } 
-)
+    console.log(currentRound)
+    })
+    
 
+function endTrivia(){
+    if(currentRound === allQuestions.length){
+        container.innerText = `ALL DONE! You scored ${points} out of ${allQuestions.length}`
+        optionsContainer[0].innerText = " "
+        optionsContainer[1].innerText = " "
+        optionsContainer[2].innerText = " "
+        optionsContainer[3].innerText = " "
+        comments.innerText = " "
+        // tryAgain.style.visibility =  "visible"
+        // nextButton.style.visibility = "hidden"
+    }
+}
 
-
-
-
-
-
-
-
-// var optionA = document.getElementById(optionA);
-// var optionB = document.getElementById(optionB);
-// var optionC = document.getElementById(optionC);
-// var optionD = document.getElementById(optionD);
-// let question = document.getElementById("question");
-// let answer = document.getElementById("answer");
-// const nextButton = document.querySelector(".next");
-// let currentRound = 0;
-// let points = 0;
-
-
-// // function startTrivia(){
-// //         question.innerText = questionsArray[currentRound]
-// //         optionSeen[0].innerText = possibleOptions.currentRound[0].name
-// //         optionSeen[1].innerText = possibleOptions.currentRound[1].name
-// //         optionSeen[2].innerText = possibleOptions.currentRound[2].name
-// //         optionSeen[3].innerText = possibleOptions.currentRound[3].name
-// // }
-
-// function checkAnswer(){
-//     possibleOptions[currentRound].addEventListener("click", (e)=>{
-//         e.preventDefault()
-//         if(options[currentRound].correct = true){
-//             answer.innerText = `AYYY TRUE!`
-//             currentRound++
-//             points++
-//         }else{
-//             answer.innerText = `NOPE! The correct answer was ${options[currentRound].classList.contains("rightAnswer")}`
-//             currentRound++
-//         }
-//     })
-// }
-
-// // playButton.addEventListener("click", (e) => {
-// //     e.preventDefault();
-// //     question.innerText = "The same year he won a Superbowl ring with the New York Giants, he got arrested for having a gun with no permit, found out after shooting himself in the leg at a club. Big year for..."
-// //     options[0].innerText = "Ray Rice"
-// //     options[1].innerText = "Plaxico Burress"
-// //     options[1].classList.add("rightAnswer");
-// //     options[2].innerText = "Ben Roethlesberger"
-// //     options[3].innerText = "Sebastian Janikowski"
-// // })
-
-// // for(let i = 0; i < options.length; i++){
-// //     options[i].addEventListener("click", (e)=>{
-// //         e.preventDefault();
-// //         if (options[i].classList.contains("rightAnswer")){
-// //             answer.innerText = `AYY TRUE!`
-// //             currentRound++
-// //             points++
-// //         }
-// //         else {
-// //             answer.innerText = `NOPE! The correct answer was `
-// //             currentRound++
-// //         }
-// //     })
-// // }
+tryAgain.addEventListener("click", (e)=>{
+    let currentRound = 0;
+    container.innerText = allQuestions[currentRound].question
+    optionsContainer[0].innerText = allQuestions[currentRound].options[0]
+    optionsContainer[1].innerText = allQuestions[currentRound].options[1]
+    optionsContainer[2].innerText = allQuestions[currentRound].options[2]
+    optionsContainer[3].innerText = allQuestions[currentRound].options[3]
+})

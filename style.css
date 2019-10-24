@@ -31,3 +31,6 @@ main{
 .nextButton{
     visibility: hidden;
 }
+.submit{
+    visibility: hidden;
+}
