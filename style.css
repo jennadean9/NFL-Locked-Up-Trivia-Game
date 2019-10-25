@@ -11,7 +11,7 @@ body{
     size: 10px;
 } */
 header{
-    text-shadow: 3px 2px black;
+    
     font-family: Helvetica;
     font-weight: 800;
     /* background: rgba(100, 100, 100, 0.5); */
@@ -36,13 +36,17 @@ main{
     color: black;
     display: none;
     border-radius: 2em;
-
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-right-color: red;
+    border-left-color: blue;
 }
 
 /* the typewriter animation is courtesy of CSS tricks typewriter effect */
 
 h1{
     font-size: 5em;
+    text-shadow: 3px 2px black;
     font-family: "Special Elite";
     overflow: hidden; 
     border-right: .15em solid orange; 
@@ -73,6 +77,12 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    width: 40em;
+    height: 20em;
+    border-radius: 5em;
+    margin-top: 40px;
 }
 
 @keyframes fadeIn{
@@ -86,7 +96,7 @@ section{
 }
 
 h2{
-    margin: 5em;
+    /* margin: 5em; */
     font-size: 2em;
     font-family: "Helvetica";
     text-align: center;
@@ -97,15 +107,15 @@ button{
     font-family: "Special Elite";
     padding: 20px;
     border-radius: 0.5em;
-    background: rgba(100, 100, 100, 0.5);
-    color: white;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
     font-weight: 700;
     font-size: 1em;
     transition: ease-in 0.3s;
 }
 button:hover{
-    color: blue;
-    background: white;
+    color: white;
+    background: blue;
     cursor: pointer;
 }
 .container{
@@ -148,9 +158,13 @@ button:hover{
 }
 .next-button{
     visibility: hidden;
+    background: rgba(100, 100, 100, 0.5);
+    color: black;
 }
 .try-again{
     visibility: hidden;
+    background: rgba(100, 100, 100, 0.5);
+    color: black;
 }
 .option-a{
     grid-row: 1;

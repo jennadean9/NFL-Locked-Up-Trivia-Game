@@ -35,6 +35,7 @@ const allQuestions = [
 const body = document.querySelector("body")
 const header = document.querySelector("header")
 const main = document.querySelector("main")
+const section = document.querySelector("section")
 const playButton = document.querySelector(".play");
 const container = document.querySelector(".question-container");
 const nextButton = document.querySelector(".next-button")
@@ -57,6 +58,7 @@ function startGame() {
         playButton.style.visibility = "hidden"
         subtitle.style.display = "none"
         main.style.display = "block"
+        section.style.display = "none"
 
     })
 
@@ -65,6 +67,7 @@ function startGame() {
 function chooseAnswer() {
     for (let i = 0; i < optionsContainer.length; i++) {
         optionsContainer[i].addEventListener("click", (e) => {
+            optionsContainer[i].style.pointerEvent = "none"
             if (optionsContainer[i].innerText == allQuestions[currentRound].answer) {
                 currentRound++
                 comments.innerText = "Correct"
@@ -90,6 +93,9 @@ function hitNext() {
         optionsContainer[1].innerText = allQuestions[currentRound].options[1]
         optionsContainer[2].innerText = allQuestions[currentRound].options[2]
         optionsContainer[3].innerText = allQuestions[currentRound].options[3]
+        optionsContainer[i].forEach((e) => {
+            e.target.style.pointerEvent = "auto"
+        })
         console.log(currentRound)
     })
 }
