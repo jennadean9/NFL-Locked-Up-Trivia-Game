@@ -64,7 +64,6 @@ section.addEventListener("animationstart", (e) => {
 function startGame() {
     playButton.addEventListener("click", (e) => {
         container.innerText = allQuestions[currentRound].question
-        // try to do this with a loop or .forEach()
         optionsContainer[0].innerText = allQuestions[currentRound].options[0]
         optionsContainer[1].innerText = allQuestions[currentRound].options[1]
         optionsContainer[2].innerText = allQuestions[currentRound].options[2]
@@ -103,7 +102,6 @@ function hitNext() {
         endTrivia()
         comments.innerText = " "
         container.innerText = allQuestions[currentRound].question
-        // try to do this with a loop or .forEach() 
         optionsContainer[0].innerText = allQuestions[currentRound].options[0]
         optionsContainer[1].innerText = allQuestions[currentRound].options[1]
         optionsContainer[2].innerText = allQuestions[currentRound].options[2]
@@ -119,7 +117,6 @@ function hitNext() {
 function endTrivia() {
     if (currentRound === allQuestions.length) {
         container.innerText = `You've completed your sentence. You scored ${points} out of ${allQuestions.length} points`
-        // try to do this with a loop or .forEach()
         optionsContainer[0].innerText = " "
         optionsContainer[1].innerText = " "
         optionsContainer[2].innerText = " "
