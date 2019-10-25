@@ -1,36 +1,143 @@
 body{
-    background: url("lockedup.jpg") no-repeat center center fixed;
+    background: url("nglbg.jpg") no-repeat center center fixed;
     color: aliceblue;
     background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
 }
-section{
+
+header{
     text-shadow: 3px 2px black;
     font-family: Helvetica;
     font-weight: 800;
-    background: rgba(100, 100, 100, 0.5);
+    /* background: rgba(100, 100, 100, 0.5); */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-/* h2{
-    text-shadow: 2px 1px black;
-    font-family: Helvetica;
-    font-weight: 800;
-    text-shadow: 3px 2px darkslategray;
-} */
+
 main{
-    background: rgba(100, 100, 100, 0.5);
+    /* background: rgba(100, 100, 100, 0.5); */
     font-family: Helvetica;
     font-weight: 700;
-    text-shadow: 2px 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    color: black;
+    display: none;
+    border-radius: 2em;
+
 }
-.optionsContainer{
+
+/* the typewriter animation is courtesy of CSS tricks typewriter effect */
+
+h1{
+    font-size: 5em;
+    font-family: "Special Elite";
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: 
+        typing 2.5s steps(40, end),
+        blink-caret .25s step-end 15;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+h2{
+    margin: 5em;
+    font-family: "Helvetica";
+    text-align: center;
+}
+
+button{
+    font-family: "Special Elite";
+    padding: 20px;
+    border-radius: 0.5em;
+    background: rgba(100, 100, 100, 0.5);
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: ease-in 0.3s;
+}
+button:hover{
+    color: blue;
+    background: white;
     cursor: pointer;
 }
-.nextButton{
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.question-container{
+    font-family: "Changa";
+    text-align: center;
+    font-size: 1.6em;
+    margin: 2em;
+}
+.options-container{
+    display: grid;
+    width: 40em;
+    height: 10em;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+.options{
+    cursor: pointer;
+    font-family: "Changa";
+    /* line-height: 2em; */
+    font-size: 1.4em;
+    text-align: center;
+    transition: ease-in 0.2s;
+}
+.options:hover{
+    transform: scale(1.3);
+    color: orange;
+}
+.comments{
+    text-align: center;
+    font-size: 2em;
+    font-family: "Special Elite";
+    margin: 20px;
+}
+.next-button{
     visibility: hidden;
 }
-.submit{
+.try-again{
     visibility: hidden;
+}
+.option-a{
+    grid-row: 1;
+    grid-column: 1;
+}
+.option-b{
+   grid-column: 2;
+   grid-row: 1;
+}
+.option-c{
+    grid-column: 1;
+    grid-row: 2;
+}
+.option-d{
+   grid-column: 2;
+   grid-row: 2;
 }
