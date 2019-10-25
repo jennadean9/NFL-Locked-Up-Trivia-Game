@@ -20,6 +20,6 @@ This webpage features a trvia quiz with 10 questions, and allows users to experi
 -------------------------------------
 
 #### Things to Work On
-I will continue to work responsiveness, incorperating an API, using modals to show results for the quiz, as well as each question, and animations. In addition, I will work on making two different quizzes- one that is a shorter 10-question version, and a longer 20-question version. 
+I will continue to work responsiveness, incorperating an API, using modals to show results for the quiz, as well as each question, and animations. In addition, I will work on making two different quizzes- one that is a shorter 10-question version, and a longer 20-question version. Also, I would love to add jail bars across the welcome screen with an audio file of a jail cell closing.
 
 ### I hope you enjoy the site as much as I (mostly) enjoyed creating it!

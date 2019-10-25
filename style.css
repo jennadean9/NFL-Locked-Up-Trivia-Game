@@ -45,13 +45,13 @@ main{
 /* the typewriter animation is courtesy of CSS tricks typewriter effect */
 
 h1{
-    font-size: 5em;
+    font-size: 5.6vw;
     text-shadow: 3px 2px black;
     font-family: "Special Elite";
     overflow: hidden; 
     border-right: .15em solid orange; 
     white-space: nowrap; 
-    margin: auto auto; 
+    margin: auto; 
     color: rgba(207, 203, 203, 0.671);
     letter-spacing: .2em; 
     transition: all 1s ease;
@@ -59,11 +59,13 @@ h1{
         typing 2.8s steps(40, end),
         blink-caret .3s step-end 23;
     animation-fill-mode: forwards;
+    /* max-width: 100%; */
+    /* width: 6vw; */
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 60% }
+  to { width: 61% }
 }
 
 @keyframes blink-caret {
@@ -110,7 +112,7 @@ section{
 
 h2{
     /* margin: 5em; */
-    font-size: 2em;
+    font-size: 2.5vw;
     font-family: "Changa";
     text-align: center;
     text-shadow: 0.5px 0.5px blue;
@@ -118,6 +120,7 @@ h2{
 }
 h4{
     font-family: "Special Elite";
+    font-size: 1.3vw;
 }
 button{
     font-family: "Special Elite";
@@ -126,7 +129,7 @@ button{
     background: rgba(255, 255, 255, 0.5);
     color: black;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1.45vw;
     transition: ease-in 0.3s;
 }
 button:hover{
@@ -144,24 +147,24 @@ button:hover{
 .question-container{
     font-family: "Changa";
     text-align: center;
-    font-size: 1.6em;
+    font-size: 2vw;
     margin: 2em;
     text-shadow: 0.5px 0.5px blue;
-    width: 40em;
+    width: 75%;
 }
 .options-container{
     display: grid;
-    width: 40em;
-    height: 10em;
+    width: 59%;
+    height: 15vh;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
+    grid-gap: 1vw;
 }
 .options{
     cursor: pointer;
     font-family: "Changa";
     /* line-height: 2em; */
-    font-size: 1.4em;
+    font-size: 1.8vw;
     text-align: center;
     transition: ease-in 0.2s;
 }

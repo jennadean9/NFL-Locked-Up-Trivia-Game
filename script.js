@@ -37,8 +37,8 @@ const allQuestions = [
     new QandA("Which former Cowboy's Lamborghini was found abandoned after hitting a pole, and then found and arrested while he was riding an electric scoooter?",
         ["Dez Bryant", "Roger Staubach", "Terrance Williams", "Cole Beasley"],
         "Terrance Williams")
-
 ];
+
 const body = document.querySelector("body")
 const header = document.querySelector("header")
 const main = document.querySelector("main")
@@ -81,27 +81,26 @@ function startGame() {
 function chooseAnswer() {
     for (let i = 0; i < optionsContainer.length; i++) {
         optionsContainer[i].addEventListener("click", (e) => {
+            nextButton.style.visibility = "visible"
             for (let j = 0; j < optionsContainer.length; j++) {
                 optionsContainer[j].style.pointerEvents = "none"
             }
             if (optionsContainer[i].innerText == allQuestions[currentRound].answer) {
                 currentRound++
                 comments.innerText = "Correct"
-                nextButton.style.visibility = "visible"
                 points++
 
             } else {
                 currentRound++
-                comments.innerText = `Incorrect. It was ${allQuestions[currentRound - 1].answer}!`
-                nextButton.style.visibility = "visible"
+                comments.innerText = `Incorrect. The culprit was ${allQuestions[currentRound - 1].answer}`
             }
         })
     }
 }
 function hitNext() {
     nextButton.addEventListener("click", (e) => {
-        endTrivia()
         nextButton.style.visibility = "hidden"
+        endTrivia()
         comments.innerText = " "
         container.innerText = allQuestions[currentRound].question
         // try to do this with a loop or .forEach() 
@@ -119,7 +118,7 @@ function hitNext() {
 
 function endTrivia() {
     if (currentRound === allQuestions.length) {
-        container.innerText = `You've completed your sentence! You scored ${points} out of ${allQuestions.length} points`
+        container.innerText = `You've completed your sentence. You scored ${points} out of ${allQuestions.length} points`
         // try to do this with a loop or .forEach()
         optionsContainer[0].innerText = " "
         optionsContainer[1].innerText = " "
