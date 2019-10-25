@@ -81,7 +81,9 @@ function startGame() {
 function chooseAnswer() {
     for (let i = 0; i < optionsContainer.length; i++) {
         optionsContainer[i].addEventListener("click", (e) => {
-            optionsContainer[i].style.pointerEvent = "none"
+            for (let j = 0; j < optionsContainer.length; j++) {
+                optionsContainer[j].style.pointerEvents = "none"
+            }
             if (optionsContainer[i].innerText == allQuestions[currentRound].answer) {
                 currentRound++
                 comments.innerText = "Correct"
@@ -107,9 +109,9 @@ function hitNext() {
         optionsContainer[1].innerText = allQuestions[currentRound].options[1]
         optionsContainer[2].innerText = allQuestions[currentRound].options[2]
         optionsContainer[3].innerText = allQuestions[currentRound].options[3]
-        // optionsContainer[i].forEach((e) => {
-        //     e.target.style.pointerEvent = "auto"
-        // })
+        for (let j = 0; j < optionsContainer.length; j++) {
+            optionsContainer[j].style.pointerEvents = "auto"
+        }
         console.log(currentRound)
     })
 }
@@ -117,7 +119,7 @@ function hitNext() {
 
 function endTrivia() {
     if (currentRound === allQuestions.length) {
-        container.innerText = `Your sentence is done! You scored ${points} out of ${allQuestions.length}`
+        container.innerText = `You've completed your sentence! You scored ${points} out of ${allQuestions.length} points`
         // try to do this with a loop or .forEach()
         optionsContainer[0].innerText = " "
         optionsContainer[1].innerText = " "

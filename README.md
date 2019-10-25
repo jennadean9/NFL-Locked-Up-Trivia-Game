@@ -2,7 +2,6 @@
 
 ## A trivia game to test how much you know on the crime history of the NFL
 
------------------------------
 This webpage features a trvia quiz with 10 questions, and allows users to experience a fun, animated and light-hearted trvia game!
 
 ---------------------------------
