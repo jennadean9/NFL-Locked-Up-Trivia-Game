@@ -5,7 +5,11 @@ body{
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: multiply;
 }
-
+/* image{
+    height: 100%;
+    z-index: -1;
+    size: 10px;
+} */
 header{
     text-shadow: 3px 2px black;
     font-family: Helvetica;
@@ -15,6 +19,7 @@ header{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 40px;
 }
 
 main{
@@ -59,11 +64,33 @@ h1{
   50% { border-color: orange; }
 }
 
+section{
+    animation: 4s fadeIn;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    animation-delay: 2.8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;;
+    }
+}
 
 h2{
     margin: 5em;
+    font-size: 2em;
     font-family: "Helvetica";
     text-align: center;
+
 }
 
 button{

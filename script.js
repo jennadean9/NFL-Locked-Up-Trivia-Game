@@ -27,7 +27,10 @@ const allQuestions = [
         "Randy Moss"),
     new QandA("Which unortunate former RB for the Vikings got put in handcuffs at the airport for carrying dried urine and a Whizzinator? Hm? What's a Whizzinator, you ask? Why, it is a device that turns dried urine into liquid urine.",
         ["Wes Welker", "Onterrio Smith", "Cedric Benson", "Fran Tarkenton"],
-        "Onterrio Smith")
+        "Onterrio Smith"),
+    new QandA("Which former cornerback started throwing upper cuts to the jaw of the bouncer outside of the club who wouldn't let him in         until he put his pants above his knees?",
+        ["Jason Sehorn", "Richard Sherman", "Deion Sanders", "Cedric Griffin"],
+        "Cedric Griffin")
 ];
 const body = document.querySelector("body")
 const header = document.querySelector("header")
@@ -67,6 +70,7 @@ function chooseAnswer() {
                 comments.innerText = "Correct"
                 nextButton.style.visibility = "visible"
                 points++
+
             } else {
                 currentRound++
                 comments.innerText = "Incorrect"
