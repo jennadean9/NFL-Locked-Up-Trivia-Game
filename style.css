@@ -79,7 +79,7 @@ h1{
 }
 
 section{
-    animation: 4s fadeIn;
+    animation: 2.5s fadeIn;
     animation-fill-mode: forwards;
     visibility: hidden;
     animation-delay: 4s;
@@ -207,7 +207,7 @@ button:hover{
    grid-column: 2;
    grid-row: 2;
 }
-.results{
+/* .results{
     animation: fade 3s;
     animation-fill-mode: forwards;
     background: rgba(255, 255, 255, 0.5);
@@ -219,4 +219,4 @@ button:hover{
     100%{
         opacity: 1;
     }
-}
+} */
