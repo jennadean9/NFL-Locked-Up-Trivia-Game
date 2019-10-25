@@ -58,11 +58,12 @@ h1{
     animation: 
         typing 2.8s steps(40, end),
         blink-caret .3s step-end 23;
+    animation-fill-mode: forwards;
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 50% }
+  to { width: 60% }
 }
 
 @keyframes blink-caret {
@@ -92,7 +93,9 @@ section{
     height: 20em;
     border-radius: 4em;
     margin-top: 40px;
-    padding: 10px;
+    padding: 40px;
+    width: 80%;
+    height: 50%;
 }
 
 @keyframes fadeIn{
@@ -140,6 +143,7 @@ button:hover{
     text-align: center;
     font-size: 1.6em;
     margin: 2em;
+    text-shadow: 1px 1px blue;
 }
 .options-container{
     display: grid;
@@ -202,4 +206,17 @@ button:hover{
 .option-d{
    grid-column: 2;
    grid-row: 2;
+}
+.results{
+    animation: fade 3s;
+    animation-fill-mode: forwards;
+    background: rgba(255, 255, 255, 0.5);
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
