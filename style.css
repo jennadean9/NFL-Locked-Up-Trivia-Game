@@ -51,11 +51,13 @@ h1{
     overflow: hidden; 
     border-right: .15em solid orange; 
     white-space: nowrap; 
-    margin: 0 auto; 
-    letter-spacing: .15em; 
+    margin: autos auto; 
+    color: rgb(207, 203, 203);
+    letter-spacing: .2em; 
+    transition: all 1s ease;
     animation: 
-        typing 2.5s steps(40, end),
-        blink-caret .25s step-end 15;
+        typing 2.8s steps(40, end),
+        blink-caret .3s step-end 23;
 }
 
 @keyframes typing {
@@ -68,11 +70,18 @@ h1{
   50% { border-color: orange; }
 }
 
+.center-position{
+    transform: translateY(20vh);
+    transition: all 1s ease;
+    color:white;
+    text-shadow: 4px 2px black;
+}
+
 section{
     animation: 4s fadeIn;
     animation-fill-mode: forwards;
     visibility: hidden;
-    animation-delay: 2.8s;
+    animation-delay: 4s;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,8 +90,9 @@ section{
     background: rgba(255, 255, 255, 0.8);
     width: 40em;
     height: 20em;
-    border-radius: 5em;
+    border-radius: 4em;
     margin-top: 40px;
+    padding: 10px;
 }
 
 @keyframes fadeIn{
@@ -98,7 +108,7 @@ section{
 h2{
     /* margin: 5em; */
     font-size: 2em;
-    font-family: "Helvetica";
+    font-family: "Changa";
     text-align: center;
 
 }
@@ -117,6 +127,7 @@ button:hover{
     color: white;
     background: blue;
     cursor: pointer;
+    transform: scale(1.15);
 }
 .container{
     display: flex;
@@ -155,6 +166,16 @@ button:hover{
     font-size: 2em;
     font-family: "Special Elite";
     margin: 20px;
+    animation: fade 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .next-button{
     visibility: hidden;

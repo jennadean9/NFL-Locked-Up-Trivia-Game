@@ -43,9 +43,15 @@ const optionsContainer = document.querySelectorAll(".options")
 const comments = document.querySelector(".comments")
 const tryAgain = document.querySelector(".try-again")
 const subtitle = document.querySelector("h2")
+const title = document.querySelector("h1")
 let currentRound = 0;
 let currentQuestion = allQuestions[currentRound].question;
 let points = 0;
+
+section.addEventListener("animationstart", (e) => {
+    console.log("Animtation has start");
+    title.classList.remove("center-position")
+})
 
 function startGame() {
     playButton.addEventListener("click", (e) => {
@@ -93,9 +99,9 @@ function hitNext() {
         optionsContainer[1].innerText = allQuestions[currentRound].options[1]
         optionsContainer[2].innerText = allQuestions[currentRound].options[2]
         optionsContainer[3].innerText = allQuestions[currentRound].options[3]
-        optionsContainer[i].forEach((e) => {
-            e.target.style.pointerEvent = "auto"
-        })
+        // optionsContainer[i].forEach((e) => {
+        //     e.target.style.pointerEvent = "auto"
+        // })
         console.log(currentRound)
     })
 }
